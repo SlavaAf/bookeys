@@ -171,22 +171,25 @@
     }
   };
 
-  // elems.email.onblur = function () {
-  //   // elems.email.classList.remove('error');
-  //   if(!elems.email.value) {
-  //     elems.email.classList.add('error');
-  //   }
-  // };
+  elems.email.onblur = function () {
+    // elems.email.classList.remove('error');
+    if(!elems.email.value) {
+      elems.email.classList.add('error');
+    }else{
+      elems.phone.classList.remove('error');
+    }
+  };
 
   elems.phone.onblur = function () {
     if(!elems.phone.value) {
       elems.phone.classList.add('error');
+    }else{
+      elems.email.classList.remove('error');
     }
-
   };
 
   setInterval(function () {
-    if(!(elems.problem.value == 'default') && elems.town.value && elems.company.value && elems.name.value && elems.phone.value && rePhone.test(elems.phone.value)) {
+    if(!(elems.problem.value == 'default') && elems.town.value && elems.company.value && elems.name.value && ((elems.phone.value && rePhone.test(elems.phone.value)))||elems.email.value) {
       formBtn.removeAttribute('disabled');
     } else {
       formBtn.setAttribute('disabled', true);
@@ -267,6 +270,8 @@
 
     formBtn.addEventListener('click', function () {
       success.classList.add('visible');
+      layoutLang.classList.add('hidden');
+      disabled_onepage_scroll.classList.add('disabled-onepage-scroll1');
 
         setTimeout(function () {
           var data = onepage.querySelector('a[href="#1"]');
@@ -305,6 +310,8 @@
 
           data.classList.toggle('active');
 
+          disabled_onepage_scroll.classList.remove('disabled-onepage-scroll1');
+          layoutLang.classList.remove('hidden');
           layoutBtn.classList.remove('hidden');
           contacts.classList.remove('hidden');
           onepage.classList.remove('onepage-pagination--white');

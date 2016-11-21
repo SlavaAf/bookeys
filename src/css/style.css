@@ -4,3 +4,39 @@
 		display: none;
 	}
 }
+.section__text {
+	h1 {
+		color: #fff;
+    	font-family: HelveticaBold,Arial,sans-serif;
+	    margin: 80px 42px 20px 35px;
+	    font-size: 26px;
+	    line-height: 1.69;
+	    letter-spacing: .4px;
+	    margin-bottom: 0;
+	    font-size: 38px;
+	}
+	h2 {
+		color: #fff;
+    	font-family: HelveticaBold,Arial,sans-serif;
+	    margin: 80px 42px 20px 35px;
+	    font-size: 26px;
+	    line-height: 1.69;
+	    letter-spacing: .4px;
+	    margin-top: 0;
+	}
+	&-no-hover{
+		width: 90%;
+	}
+}
+.section__title{
+	color: #333;
+}
+i{
+	&.rouble{
+		background-image: url(../img/roub.png);
+		background-size: auto 14px;
+		background-repeat: no-repeat;
+		size: 14px 14px;
+		display: inline-block;
+	}
+}
