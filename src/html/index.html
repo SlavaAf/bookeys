@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <title>Бонака — биотехнология очистки</title>
     <meta name="description" content="Глубокая и экологичная очистка оборудования бактериями от накипи и шлама. Эффективность 98%. Для котлов, теплообменников, отопительных систем, выпаривателей и подогревателей.">
+    <meta property="og:image" content="http://bookeys.ru/logo.svg"/>
+    <meta property="og:url" content="http://bookeys.ru"/>
+    <meta property="og:site_name" content="Бонака — биотехнология очистки"/>
+    <meta property="og:title" content="Бонака — биотехнология очистки"/>
+    <meta property="og:description" content="Глубокая и экологичная очистка оборудования бактериями от накипи и шлама. Эффективность 98%. Для котлов, теплообменников, отопительных систем, выпаривателей и подогревателей."/>
+
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <div id="preloader" class="preloader">
@@ -16,32 +23,8 @@
             </g>
         </g>
     </svg>
-    <h1 class="preloader__title">Технология удаления отложений<br>с помощью бактерий</h1>
-    <p class="preloader__text">Эффективно. Безопасно. Экологично.</p>
-  </div>
-
-  <div class="layout__footer">
-    <div class="layout__contacts">
-      <svg width="16" height="11" viewBox="0 0 16 11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>58DFD62D-2DA2-404F-AB47-5D7708A830D8</title><g fill="none"><path id="a" d="M0 0h20v20H0z"/></g><g transform="translate(-2 -5)" fill="none" class="i-mail" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M18 6.475V5H2v1.475L10 12l8-5.525zm0 2.393V16H2V8.868l8 5.332 8-5.332z" mask="url(#b)"/></g></svg>
-      <span><a href="#" class="layout__link">Напишите</a> или позвоните нам</span>
-      <svg width="17" height="20" viewBox="0 0 17 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>49790A77-9369-4B0F-A9EA-38C987EF41B3</title><g fill="none"><path id="a" d="M0 0h20v20H0z"/></g><g transform="translate(-2)" fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M.006 15.47c-.1-.227 1.001-6.173 7.465-10.453 6.463-4.28 12.081-2.72 12.103-2.818.018-.083.033 3.374.037 4.486a.4.4 0 0 1-.333.396l-4.979.851-1.872-1.965s-1.333.3-3.204 1.634c-1.87 1.334-3.072 2.623-3.072 2.623l1.133 2.466-2.274 4.054a.426.426 0 0 1-.492.2C3.444 16.63.078 15.631.006 15.47z" fill="#333" mask="url(#b)" transform="scale(1 -1) rotate(-20 -43.963 0)"/></g></svg>
-      <span class="layout__text-heavy">8 800 2000 800</span>
-    </div>
-
-    <div class="layout__about">
-      <a href="#" class="about-link">о технологии</a>
-    </div>
-
-    <div class="layout__lang-link">
-      <a class="layout__lang-link-item" href="#">in English</a>
-    </div>
-
-    <div class="layout__lang">
-        <input type="radio" name="lang" value="ru" id="ru" checked>
-        <label for="ru">рус</label>
-        <input type="radio" name="lang" value="en" id="en">
-        <label for="en">eng</label>
-    </div>
+    <h1 class="preloader__title" data-lang="str1">Технология удаления отложений<br>с помощью бактерий</h1>
+    <p class="preloader__text" data-lang="str2">Эффективно. Безопасно. Экологично.</p>
   </div>
 
   <div class="layout__header">
@@ -56,55 +39,79 @@
           </g>
       </svg>
     </div>
-    <a data-index="4" href="#4" class="layout__btn" onclick="moveTo('.main', 5);">Оформить запрос</a>
+    <a data-index="4" href="#4" class="layout__btn" onclick="moveTo('.main', 5);" data-lang="str3">Оформить запрос</a>
+  </div>
+
+  <div class="layout__footer">
+    <div class="layout__contacts">
+      <svg width="16" height="11" viewBox="0 0 16 11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>58DFD62D-2DA2-404F-AB47-5D7708A830D8</title><g fill="none"><path id="a" d="M0 0h20v20H0z"/></g><g transform="translate(-2 -5)" fill="none" class="i-mail" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M18 6.475V5H2v1.475L10 12l8-5.525zm0 2.393V16H2V8.868l8 5.332 8-5.332z" mask="url(#b)"/></g></svg>
+      <span data-lang="str4"><a href="#" class="layout__link">Напишите</a> или позвоните нам</span>
+      <svg width="17" height="20" viewBox="0 0 17 20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><title>49790A77-9369-4B0F-A9EA-38C987EF41B3</title><g fill="none"><path id="a" d="M0 0h20v20H0z"/></g><g transform="translate(-2)" fill="none" fill-rule="evenodd"><mask id="b" fill="#fff"><use xlink:href="#a"/></mask><path d="M.006 15.47c-.1-.227 1.001-6.173 7.465-10.453 6.463-4.28 12.081-2.72 12.103-2.818.018-.083.033 3.374.037 4.486a.4.4 0 0 1-.333.396l-4.979.851-1.872-1.965s-1.333.3-3.204 1.634c-1.87 1.334-3.072 2.623-3.072 2.623l1.133 2.466-2.274 4.054a.426.426 0 0 1-.492.2C3.444 16.63.078 15.631.006 15.47z" fill="#333" mask="url(#b)" transform="scale(1 -1) rotate(-20 -43.963 0)"/></g></svg>
+      <span class="layout__text-heavy">8 800 2000 800</span>
+    </div>
+
+    <div class="layout__about">
+      <a href="#" class="about-link" data-lang="str5">о технологии</a>
+    </div>
+
+    <div class="layout__lang-link">
+      <a class="layout__lang-link-item" href="#">in English</a>
+    </div>
+
+    <div class="layout__lang">
+        <input type="radio" name="lang" value="ru" id="ru" checked>
+        <label for="ru">рус</label>
+        <input type="radio" name="lang" value="en" id="en">
+        <label for="en">eng</label>
+    </div>
   </div>
 
   <div class="main">
     <section class="section section--1">
-      <h3 class="section__title">области применения</h3>
+      <h3 class="section__title" data-lang="str6">области применения</h3>
       <div class="section__left">
         <div class="toggles">
           <input type="radio" name="area" value="area-1" id="area-1" checked>
           <input type="radio" name="area" value="area-2" id="area-2">
           <input type="radio" name="area" value="area-3" id="area-3">
           <div class="toggles__tabs">
-            <label for="area-1">теплогенерация</label>
-            <label for="area-2">теплопотребление</label>
-            <label for="area-3">промышленность</label>
+            <label for="area-1" data-lang="str7">теплогенерация</label>
+            <label for="area-2" data-lang="str14">теплопотребление</label>
+            <label for="area-3" data-lang="str20">промышленность</label>
           </div>
           <div class="section__text section__text-1">
             <div class="section__text-no-hover">
-              <h2>Отопительный сезон <br> близко? Оборудование, <br> приведённое к данным <br> паспорта, — ещё ближе.</h2>
-              <a href="#" class="section__text-link-1">Все преимущества</a>
+              <h2 data-lang="str8">Отопительный сезон<br>близко? Оборудование,<br>приведённое к данным<br>паспорта, — ещё ближе.</h2>
+              <a href="#" class="section__text-link-1" data-lang="str9">Все преимущества</a>
             </div>
             <div class="section__text-hover">
-              <p>Уменьшение рабочего давления в системе.</p>
-              <p>Ускорение нагрева воды.</p>
-              <p>Увеличение КПД котлов.</p>
-              <p>Восстановление паспортных значений оборудования.</p>
+              <p data-lang="str10">Уменьшение рабочего давления в системе.</p>
+              <p data-lang="str11">Ускорение нагрева воды.</p>
+              <p data-lang="str12">Увеличение КПД котлов.</p>
+              <p data-lang="str13">Восстановление паспортных значений оборудования.</p>
             </div>
           </div>
           <div class="section__text section__text-2">
             <div class="section__text-no-hover">
-              <h2>Жильцы мёрзнут? Всем будет <br> одинаково тепло с первого <br> до последнего этажа</h2>
-              <a href="#" class="section__text-link-2">Все преимущества</a>
+              <h2 data-lang="str15">Жильцы мёрзнут? Всем будет <br> одинаково тепло с первого <br> до последнего этажа</h2>
+              <a href="#" class="section__text-link-2" data-lang="str16">Все преимущества</a>
             </div>
             <div class="section__text-hover">
-              <p>Повышение теплоотдачи радиаторов.</p>
-              <p>Увеличение температуры в помещении на 4-8 Сº.</p>
-              <p>Увеличение срока службы отопительной системы.</p>
+              <p data-lang="str17">Повышение теплоотдачи радиаторов.</p>
+              <p data-lang="str18">Увеличение температуры в помещении на 4-8 Сº.</p>
+              <p data-lang="str19">Увеличение срока службы отопительной системы.</p>
             </div>
           </div>
           <div class="section__text section__text-3">
             <div class="section__text-no-hover">
-              <h2>Себестоимость растёт? <br> После очистки оборудования <br> расти будет эффективность.</h2>
-              <a href="#" class="section__text-link-3">Все преимущества</a>
+              <h2 data-lang="str21">Себестоимость растёт? <br> После очистки оборудования <br> расти будет эффективность.</h2>
+              <a href="#" class="section__text-link-3" data-lang="str22">Все преимущества</a>
             </div>
             <div class="section__text-hover">
-              <p>Экономия на топливе.</p>
-              <p>Увеличение срока службы оборудования.</p>
-              <p>Повышение эффективности производства.</p>
-              <p>Снижение затрат на эксплуатацию.</p>
+              <p data-lang="str23">Экономия на топливе.</p>
+              <p data-lang="str24">Увеличение срока службы оборудования.</p>
+              <p data-lang="str25">Повышение эффективности производства.</p>
+              <p data-lang="str26">Снижение затрат на эксплуатацию.</p>
             </div>
           </div>
         </div>
@@ -132,40 +139,40 @@
     </section>
 
     <section class="section section--2">
-      <h3 class="section__title">Процесс</h3>
-      <h3 class="section__title section__title--scheme">Схема подключения</h3>
+      <h3 class="section__title" data-lang="str27">Процесс</h3>
+      <h3 class="section__title section__title--scheme" data-lang="str28">Схема подключения</h3>
 
       <div class="scheme">
         <div class="scheme__img">
           <div class="scheme__pin  scheme__pin--1">
-            <div class="scheme__pin-text">Воздушный клапан автоматический</div>
+            <div class="scheme__pin-text" data-lang="str29">Воздушный клапан автоматический</div>
           </div>
           <div class="scheme__pin  scheme__pin--2">
-            <div class="scheme__pin-text">Соединительные шланги</div>
+            <div class="scheme__pin-text" data-lang="str30">Соединительные шланги</div>
           </div>
           <div class="scheme__pin  scheme__pin--3">
-            <div class="scheme__pin-text">Объект очистки</div>
+            <div class="scheme__pin-text" data-lang="str31">Объект очистки</div>
           </div>
           <div class="scheme__pin  scheme__pin--4">
-            <div class="scheme__pin-text">Фильтр</div>
+            <div class="scheme__pin-text" data-lang="str32">Фильтр</div>
           </div>
           <div class="scheme__pin  scheme__pin--5">
-              <div class="scheme__pin-text">Компрессорная установка</div>
+              <div class="scheme__pin-text" data-lang="str33">Компрессорная установка</div>
           </div>
           <div class="scheme__pin  scheme__pin--6">
-            <div class="scheme__pin-text">Циркуляционная ёмкость для приготовления рабочего раствора</div>
+            <div class="scheme__pin-text" data-lang="str34">Циркуляционная ёмкость для приготовления рабочего раствора</div>
           </div>
           <div class="scheme__pin  scheme__pin--7">
-            <div class="scheme__pin-text">Запорная арматура</div>
+            <div class="scheme__pin-text" data-lang="str35">Запорная арматура</div>
           </div>
           <div class="scheme__pin  scheme__pin--8">
-            <div class="scheme__pin-text">Насос для циркуляции<br>и заполнения объекта очистки рабочим раствором</div>
+            <div class="scheme__pin-text" data-lang="str36">Насос для циркуляции<br>и заполнения объекта очистки рабочим раствором</div>
           </div>
           <div class="scheme__pin  scheme__pin--9">
-            <div class="scheme__pin-text">Обратный клапан</div>
+            <div class="scheme__pin-text" data-lang="str37">Обратный клапан</div>
           </div>
           <div class="scheme__pin  scheme__pin--10">
-            <div class="scheme__pin-text">Подпитка водой</div>
+            <div class="scheme__pin-text" data-lang="str38">Подпитка водой</div>
           </div>
           <img src="img/scheme.svg" alt="">
         </div>
@@ -173,8 +180,8 @@
           <div class="scheme__toggle-wrap">
             <div class="scheme__toggle-open"></div>
             <div class="scheme__toggle-text-wrap">
-              <div class="scheme__toggle-text">Схема</div>
-              <div class="scheme__toggle-text">подключения</div>
+              <div class="scheme__toggle-text" data-lang="str39">Схема</div>
+              <div class="scheme__toggle-text" data-lang="str40">подключения</div>
             </div>
           </div>
         </div>
@@ -184,10 +191,10 @@
         <div class="process__item">
           <div class="process__col">
             <div class="process__count">0</div>
-            <h3 class="process__title">Первичный анализ<br>загрязнённого оборудования</h3>
+            <h3 class="process__title" data-lang="str41">Первичный анализ<br>загрязнённого оборудования</h3>
           </div>
           <div class="process__col">
-            <div class="process__text">
+            <div class="process__text" data-lang="str42">
               Получаем фрагмент оборудования, анализируем химический состав и
               структуру отложений, выясняем особенности оборудования, составляем
               первичную спецификацию на очистку.
@@ -198,10 +205,10 @@
         <div class="process__item">
           <div class="process__col">
             <div class="process__count">1</div>
-            <h3 class="process__title">Подбор биораствора<br>и параметров очистки</h3>
+            <h3 class="process__title" data-lang="str43">Подбор биораствора<br>и параметров очистки</h3>
           </div>
           <div class="process__col">
-            <div class="process__text">
+            <div class="process__text" data-lang="str44">
               Подбираем наиболее эффективный штамм бактерий для борьбы с
               найденными отложениями, готовим биораствор нужного объёма и
               концентрации, рассчитываем длительность работ.
@@ -212,10 +219,10 @@
         <div class="process__item">
           <div class="process__col">
             <div class="process__count">2</div>
-            <h3 class="process__title">Подключение системы<br>очистки</h3>
+            <h3 class="process__title" data-lang="str45">Подключение системы<br>очистки</h3>
           </div>
           <div class="process__col">
-            <div class="process__text">
+            <div class="process__text" data-lang="str46">
               Отсоединяем оборудование от технологической цепи, подключаем
               систему очистки по замкнутому контуру, чтобы биораствор циркулировал
               без дополнительного давления на систему.
@@ -226,10 +233,10 @@
         <div class="process__item">
           <div class="process__col">
             <div class="process__count">3</div>
-            <h3 class="process__title">Очистка оборудования,<br>контроль процесса</h3>
+            <h3 class="process__title" data-lang="str47">Очистка оборудования,<br>контроль процесса</h3>
           </div>
           <div class="process__col">
-            <div class="process__text">
+            <div class="process__text" data-lang="str48">
               Запускаем систему очистки, следим за циркуляцией биораствора,
               поддерживаем необходимые параметры системы до окончания процесса.
             </div>
@@ -239,10 +246,10 @@
         <div class="process__item">
           <div class="process__col">
             <div class="process__count"><img src="img/i-check-black.svg" alt=""></div>
-            <h3 class="process__title">Запуск и проверка<br>очищенного оборудования</h3>
+            <h3 class="process__title" data-lang="str49">Запуск и проверка<br>очищенного оборудования</h3>
           </div>
           <div class="process__col">
-            <div class="process__text">
+            <div class="process__text" data-lang="str50">
               Сливаем биораствор в канализацию, промываем систему водой,
               включаем оборудование, гордимся проделанной работой.
             </div>
@@ -254,19 +261,19 @@
     </section>
 
     <section class="section section--3">
-      <h3 class="section__title">Сравнение решений</h3>
+      <h3 class="section__title" data-lang="str51">Сравнение решений</h3>
       <div class="table">
         <div class="table__row table__row--white">
           <div class="table__col table__col--first"></div>
-          <div class="table__col">Капитальный<br>ремонт</div>
-          <div class="table__col table__col--green">Биотехнологическая<br>очистка</div>
-          <div class="table__col">Механическая<br>очистка</div>
-          <div class="table__col">Химическая<br>очистка</div>
-          <div class="table__col">Электрофизическая<br>очистка</div>
-          <div class="table__col">Промывка<br>водой</div>
+          <div class="table__col" data-lang="str52">Капитальный<br>ремонт</div>
+          <div class="table__col table__col--green" data-lang="str53">Биотехнологическая<br>очистка</div>
+          <div class="table__col" data-lang="str54">Механическая<br>очистка</div>
+          <div class="table__col" data-lang="str55">Химическая<br>очистка</div>
+          <div class="table__col" data-lang="str56">Электрофизическая<br>очистка</div>
+          <div class="table__col" data-lang="str57">Промывка<br>водой</div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Удаляет отложения</div>
+          <div class="table__col table__col--first" data-lang="str58">Удаляет отложения</div>
           <div class="table__col"><span>100%</span></div>
           <div class="table__col table__col--green"><span>98%</span></div>
           <div class="table__col"><span>90%</span></div>
@@ -275,7 +282,7 @@
           <div class="table__col"><span>1%</span></div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Безвредно<br>для материалов</div>
+          <div class="table__col table__col--first" data-lang="str59">Безвредно<br>для материалов</div>
           <div class="table__col">
             <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -304,7 +311,7 @@
           </div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Экологично</div>
+          <div class="table__col table__col--first" data-lang="str60">Экологично</div>
           <div class="table__col"></div>
           <div class="table__col table__col--green">
             <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><title>C93A5B6E-C0AD-4BDE-A266-BEFABB6B297D</title><path d="M7.555 17.695l9.701-14.876a1.5 1.5 0 0 0-2.512-1.638L6.946 13.14l-3.95-3.511a1.5 1.5 0 0 0-1.993 2.242l6.552 5.824z" fill="#fff" fill-rule="evenodd"/></svg>
@@ -342,7 +349,7 @@
           </div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Не требует специальной утилизации</div>
+          <div class="table__col table__col--first" data-lang="str61">Не требует специальной утилизации</div>
           <div class="table__col">
           <svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 
@@ -389,7 +396,7 @@
           </div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Образует защитную<br>пленку</div>
+          <div class="table__col table__col--first" data-lang="str62">Образует защитную<br>пленку</div>
           <div class="table__col"></div>
           <div class="table__col table__col--green">
             <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><title>C93A5B6E-C0AD-4BDE-A266-BEFABB6B297D</title><path d="M7.555 17.695l9.701-14.876a1.5 1.5 0 0 0-2.512-1.638L6.946 13.14l-3.95-3.511a1.5 1.5 0 0 0-1.993 2.242l6.552 5.824z" fill="#fff" fill-rule="evenodd"/></svg>
@@ -400,16 +407,16 @@
           <div class="table__col"></div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Срок проведения работ</div>
-          <div class="table__col table__col-text"><span>от 90 дней</span></div>
-          <div class="table__col table__col--green table__col-text"><span>1-7 дней</span></div>
-          <div class="table__col table__col-text"><span>30-90 дней</span></div>
-          <div class="table__col table__col-text"><span>1-3 дня</span></div>
-          <div class="table__col table__col-text"><span>60-90 дней</span></div>
-          <div class="table__col table__col-text"><span>1 день</span></div>
+          <div class="table__col table__col--first" data-lang="str63">Срок проведения работ</div>
+          <div class="table__col table__col-text"><span data-lang="str64">от 90 дней</span></div>
+          <div class="table__col table__col--green table__col-text"><span data-lang="str65">1-7 дней</span></div>
+          <div class="table__col table__col-text"><span data-lang="str66">30-90 дней</span></div>
+          <div class="table__col table__col-text"><span data-lang="str67">1-3 дня</span></div>
+          <div class="table__col table__col-text"><span data-lang="str68">60-90 дней</span></div>
+          <div class="table__col table__col-text"><span data-lang="str69">1 день</span></div>
         </div>
         <div class="table__row table__row">
-          <div class="table__col table__col--first">Стоимость</div>
+          <div class="table__col table__col--first" data-lang="str70">Стоимость</div>
           <div class="table__col"><span class="table__rubl">₽₽₽₽</span></div>
           <div class="table__col table__col--green"><span class="table__rubl">₽₽</span></div>
           <div class="table__col"><span class="table__rubl">₽</span></div>
@@ -421,23 +428,23 @@
           <div class="table__col table__col--white table__col--first"></div>
           <div class="table__col table__col--white"></div>
           <div class="table__col table__col--light-green">
-            <a class="table__cert" href="#">Сертификаты</a>
+            <a class="table__cert" href="#" data-lang="str71">Сертификаты</a>
             <svg class="i-cert" width="12" height="12" viewBox="0 0 12 12" xmlns="http://www.w3.org/2000/svg"><title>E57AA245-84B7-4237-B921-2FE0D49C7C4F</title><path d="M0 0h12v12H0V0zm2 2h8v8H2V2zm4 5.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" class="i-cert" fill-rule="evenodd"/></svg>
             <div class="table__more-cert">
               <div class="table__more-cert-col popup-open-1">
                 <img src="img/cert-1-sm.jpg" alt="Сертификат ISO" width="100" height="140">
-                <span>Сертификат<br>ISO</span>
-                <a class="" href="#">Открыть</a>
+                <span data-lang="str72">Сертификат<br>ISO</span>
+                <a class="" href="#" data-lang="str73">Открыть</a>
               </div>
               <div class="table__more-cert-col popup-open-2">
                 <img src="img/cert-2-sm.png" alt="Сертификат соответствия" width="100" height="140">
-                <span>Сертификат соответствия</span>
-                <a class="" href="#">Открыть</a>
+                <span data-lang="str74">Сертификат соответствия</span>
+                <a class="" href="#" data-lang="str75">Открыть</a>
               </div>
               <div class="table__more-cert-col popup-open-3">
                 <img src="img/cert-3-sm.png" alt="Экологический сертификат" width="100" height="140">
-                <span>Экологический сертификат</span>
-                <a class="" href="#">Открыть</a>
+                <span data-lang="str76">Экологический сертификат</span>
+                <a class="" href="#" data-lang="str77">Открыть</a>
               </div>
             </div>
           </div>
@@ -450,59 +457,59 @@
     </section>
 
     <section class="section section--4">
-      <h3 class="section__title">Отзывы</h3>
+      <h3 class="section__title" data-lang="str78">Отзывы</h3>
       <div class="feedback">
         <div class="feddback__wrap">
           <div class="feedback__item">
-            <p>По результатам проведенной очистки заметно снизился перепад
+            <p data-lang="str79">По результатам проведенной очистки заметно снизился перепад
               давления на входе и выходе теплообменного оборудования,
               разница температур на входе и выходе вернулась к паспортным значениям.</p>
-              <a class="feedback__all feedback-open-1" href="#">Весь отзыв</a>
+              <a class="feedback__all feedback-open-1" href="#" data-lang="str80">Весь отзыв</a>
           </div>
           <div class="feedback__item">
-            <p>Благодаря качественному выполнению работ с применением новых технологий,
+            <p data-lang="str81">Благодаря качественному выполнению работ с применением новых технологий,
             в нашем 5-ти этажном офисном здании стало тепло!</p>
-              <a class="feedback__all feedback-open-2" href="#">Весь отзыв</a>
+              <a class="feedback__all feedback-open-2" href="#" data-lang="str82">Весь отзыв</a>
           </div>
           <div class="feedback__item">
-            <p>Эффективность проведённой работы соответствует установленным
+            <p data-lang="str83">Эффективность проведённой работы соответствует установленным
               договором требованиям. Степень очистки составила 99%. Теплосъем
               оборудования увеличен на 25%. Результаты оформлены отчетом.</p>
-              <a class="feedback__all feedback-open-3" href="#">Весь отзыв</a>
+              <a class="feedback__all feedback-open-3" href="#" data-lang="str84">Весь отзыв</a>
           </div>
         </div>
         <div class="feedback__wrap_ feedback__item">
-          <h3 class="feedback__name">Киек О.Ю</h3>
-            <h3 class="feedback__position">Директор<br>АФ АО «Теплоэнергосервис»,</h3>
-          <div class="feedback__direction  feedback__direction--tube">Теплогенерация</div>
+          <h3 class="feedback__name" data-lang="str85">Киек О.Ю</h3>
+            <h3 class="feedback__position" data-lang="str86">Директор<br>АФ АО «Теплоэнергосервис»,</h3>
+          <div class="feedback__direction  feedback__direction--tube" data-lang="str87">Теплогенерация</div>
         </div>
         <div class="feedback__wrap_ feedback__item">
-          <h3 class="feedback__name">Лыков А.А.</h3>
-            <h3 class="feedback__position">Директор<br>ООО «Армада»,</h3>
-          <div class="feedback__direction  feedback__direction--radiator">Теплопотребление</div>
+          <h3 class="feedback__name" data-lang="str88">Лыков А.А.</h3>
+            <h3 class="feedback__position" data-lang="str89">Директор<br>ООО «Армада»,</h3>
+          <div class="feedback__direction  feedback__direction--radiator" data-lang="str90">Теплопотребление</div>
         </div>
         <div class="feedback__wrap_ feedback__item">
-          <h3 class="feedback__position">Директор по развитию<br>ОАО «Красцветмет»,</h3>
-          <h3 class="feedback__name">Рябчиков А.А.</h3>
-          <div class="feedback__direction  feedback__direction--factory">Промышленность</div>
+          <h3 class="feedback__position" data-lang="str91">Директор по развитию<br>ОАО «Красцветмет»,</h3>
+          <h3 class="feedback__name" data-lang="str92">Рябчиков А.А.</h3>
+          <div class="feedback__direction  feedback__direction--factory" data-lang="str93">Промышленность</div>
         </div>
       </div>
     </section>
 
     <section class="section section--5">
       <form class="form" name="form" action="formdata.php" enctype="multipart/form-data" method="post">
-        <h2 class="form__title">Запрос на очистку</h2>
+        <h2 class="form__title" data-lang="str94">Запрос на очистку</h2>
         <div class="form__left">
-          <label for="select">С чем возникли сложности?</label>
+          <label for="select" data-lang="str95">С чем возникли сложности?</label>
         </div>
         <div class="form__wrap">
           <div class="form__right">
             <select name="problem" id="select">
-              <option value="default">Вид оборудования</option>
-              <option value="heating-system">Система отопления</option>
-              <option value="boiler">Котёл</option>
-              <option value="heat-exchanger">Теплообменник</option>
-              <option value="other">Другое</option>
+              <option value="default" data-lang="str96">Вид оборудования</option>
+              <option value="heating-system" data-lang="str97">Система отопления</option>
+              <option value="boiler" data-lang="str98">Котёл</option>
+              <option value="heat-exchanger" data-lang="str99">Теплообменник</option>
+              <option value="other" data-lang="str100">Другое</option>
             </select>
             <textarea placeholder="Описание проблемы" class="textarea" name="problem-text" rows="3" cols="40"></textarea>
           </div>
@@ -510,7 +517,7 @@
 
         <div class="form__wrap">
           <div class="form__left">
-            <label for="towm">Где находится<br>оборудование?</label>
+            <label for="towm" data-lang="str101">Где находится<br>оборудование?</label>
           </div>
           <div class="form__right">
             <input type="text" name="company" placeholder="Компания" required>
@@ -520,7 +527,7 @@
 
         <div class="form__wrap">
           <div class="form__left">
-            <label for="towm">Как в вам обращаться?</label>
+            <label for="towm" data-lang="str102">Как в вам обращаться?</label>
           </div>
           <div class="form__right">
             <input type="text" name="name" class="form-name" placeholder="Имя" required>
@@ -529,22 +536,22 @@
 
         <div class="form__wrap">
           <div class="form__left">
-            <label for="towm">Удобнее позвонить<br>или написать?</label>
+            <label for="towm" data-lang="str103">Удобнее позвонить<br>или написать?</label>
           </div>
           <div class="form__right">
             <div class="form__input-phone">
-              <span class="hidden">Это не похоже на телефон</span>
+              <span class="hidden" data-lang="str104">Это не похоже на телефон</span>
               <input type="phone" name="phone" placeholder="+7 ">
             </div>
             <div class="form__input-email">
-              <span class="hidden">Это не похоже на email</span>
+              <span class="hidden" data-lang="str105">Это не похоже на email</span>
               <input type="text" name="email" placeholder="email">
             </div>
           </div>
         </div>
 
         <div class="form__wrap form__wrap--btn">
-          <button class="form__btn" type="submit" name="button">отправить запрос</button>
+          <button class="form__btn" type="submit" name="button" data-lang="str106">отправить запрос</button>
         </div>
 
       </form>
@@ -552,20 +559,20 @@
   </div>
 
   <div class="about">
-    <h3 class="about__title">О технологии</h3>
+    <h3 class="about__title" data-lang="str107">О технологии</h3>
     <div class="about__close"></div>
     <div class="about__left">
-      <h4>Основа инновационной биотехнологии — модифицированные штаммы молочнокислых бактерий, выращенные за семь лет в результате тщательной селекции.</h3>
-      <p>Технология пассивна к металлу, пластику, пакле, резиновым прокладкам и другим материалам. Другими словами, раствор, циркулирующий во время очистки по замкнутому контуру, не повреждает какие-либо части оборудования. Эффективность очистки колеблется между 98% и 100%. Продукт экологически чистый, не причиняет вреда здоровью людей и животных, не нуждается в специальной утилизации.</p>
-      <p>Чтобы добиться максимального результата, к каждой задаче мы подходим индивидуально — анализ отложений на оборудовании позволяет подобрать такой штамм бактерий, который обеспечит лучшую очистку в данных условиях.</p>
+      <h4 data-lang="str108">Основа инновационной биотехнологии — модифицированные штаммы молочнокислых бактерий, выращенные за семь лет в результате тщательной селекции.</h3>
+      <p data-lang="str109">Технология пассивна к металлу, пластику, пакле, резиновым прокладкам и другим материалам. Другими словами, раствор, циркулирующий во время очистки по замкнутому контуру, не повреждает какие-либо части оборудования. Эффективность очистки колеблется между 98% и 100%. Продукт экологически чистый, не причиняет вреда здоровью людей и животных, не нуждается в специальной утилизации.</p>
+      <p data-lang="str110">Чтобы добиться максимального результата, к каждой задаче мы подходим индивидуально — анализ отложений на оборудовании позволяет подобрать такой штамм бактерий, который обеспечит лучшую очистку в данных условиях.</p>
     </div>
     <div class="about__right">
       <img src="img/about-3.png" width="85">
       <img src="img/about-2.png" width="76">
       <img src="img/about-1.png" width="110">
-      <p>После очистки скорость износа оборудования сокращается на 30%. Снижаются экологические риски и риски по охране труда на предприятии. Увеличивается теплоотдача и эффективность использования оборудования. До 10% снижается расход топлива.</p>
-      <p>Для производства уникальной биоорганической композиции «БиЗ-1» мы вводим в молочную сыворотку или в питательный субстрат модифицированные штаммы бактерий и ферментов оксидоредуктазы. В результате дальнейшего естественного брожения молочного сахара получается инновационный раствор органического происхождения.</p>
-      <p>Под действием ферментов, микроорганизмов и лактозы цикл образования органических монокислот в растворе не прекращается даже во время очистки. Бактерии вырабатывают муравьиную, щавелевую, лимонную, виноградную, масляную, молочную, пропионовую, янтарную, яблочную и другие кислоты, которые активно работают с отложениями различного происхождения. Они расщепляют твёрдые и нерастворимые соли, а также окалину, меняют их структуру, переводят в растворимые соединения, после чего их легко вымыть водой.</p>
+      <p data-lang="str111">После очистки скорость износа оборудования сокращается на 30%. Снижаются экологические риски и риски по охране труда на предприятии. Увеличивается теплоотдача и эффективность использования оборудования. До 10% снижается расход топлива.</p>
+      <p data-lang="str112">Для производства уникальной биоорганической композиции «БиЗ-1» мы вводим в молочную сыворотку или в питательный субстрат модифицированные штаммы бактерий и ферментов оксидоредуктазы. В результате дальнейшего естественного брожения молочного сахара получается инновационный раствор органического происхождения.</p>
+      <p data-lang="str113">Под действием ферментов, микроорганизмов и лактозы цикл образования органических монокислот в растворе не прекращается даже во время очистки. Бактерии вырабатывают муравьиную, щавелевую, лимонную, виноградную, масляную, молочную, пропионовую, янтарную, яблочную и другие кислоты, которые активно работают с отложениями различного происхождения. Они расщепляют твёрдые и нерастворимые соли, а также окалину, меняют их структуру, переводят в растворимые соединения, после чего их легко вымыть водой.</p>
     </div>
   </div>
 
@@ -600,12 +607,13 @@
             </g>
         </g>
     </svg>
-    <p>Мы получили ваш запрос<br>и свяжемся, чтобы уточнить детали</p>
+    <p data-lang="str114">Мы получили ваш запрос<br>и свяжемся, чтобы уточнить детали</p>
   </div>
 
   <script src="../js/jquery.js" defer></script>
   <script src="../js/utils.js"  defer></script>
   <script src="../js/app.js"    defer></script>
   <script src="../js/main.js"   defer></script>
+  <script src="../js/lang.js"   defer></script>
 </body>
 </html>

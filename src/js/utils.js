@@ -552,7 +552,7 @@ function onePageScroll(element, options) {
 // 
 // 
 // --- URL NEW
-var doHistory = function(page_index, option){
+var doHistory = function(page_index, option, lang){
   location.hash = "";
   // 
   // doHistoryLogic(page_index);
@@ -568,10 +568,18 @@ var doHistory = function(page_index, option){
   //       break;
   //   }
   // }else{
+  var b = "/";
+  if(lang){
+    if(lang == "ru"){
+      b = b + lang + b;
+    }else if(lang == "en"){
+      b = b + lang + b;
+    }
+  }
   if(!option){
-    window.history.pushState("#"+page_index, data_site[page_index].title, "/"+data_site[page_index].url+"/");
+    window.history.pushState("#"+page_index, data_site[page_index].title, b+data_site[page_index].url+"/");
   }else{
-    window.history.pushState("#"+page_index+String(option), data_site2[option].title, "/"+data_site2[option].url+"/");
+    window.history.pushState("#"+page_index+String(option), data_site2[option].title, b+data_site2[option].url+"/");
   }
   // };
   // 
@@ -591,32 +599,23 @@ var doHistoryLogic = function(page_index, option){
  //      console.log(page_index);
   // }
   switch(window.history.state){
-    // case data_site[1].url:
     case "#1":
-      // switch(option){
-        // case 1:
-        // case 2: 
-          // break;
-        // default:
-      // console.log("option");
       document.title = data_site[1].title;
       description.content = data_site[1].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[1].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[1].description;
       document.getElementById("area-1").click();
       document.querySelector('.section__img-3').classList.remove('visible');
       document.querySelector('.section__img-2').classList.remove('visible');
       document.querySelector('.section__img-1').classList.add('visible');
       document.querySelector('.section__left').classList.remove('section__left--hover');
-          // break;
-      // };
-      // if(option == 1){
-      // }else if(option == 2){
-      // }else{
-      // }
       break;
     case "#11":
       // console.log(option);
       document.title = data_site2[1].title;
       description.content = data_site2[1].description;
+      document.querySelector('meta[property="og:title"]').content = data_site2[1].title;
+      document.querySelector('meta[property="og:description"]').content = data_site2[1].description;
       document.getElementById("area-2").click();
       document.querySelector('.section__img-3').classList.remove('visible');
       document.querySelector('.section__img-1').classList.remove('visible');
@@ -626,6 +625,8 @@ var doHistoryLogic = function(page_index, option){
         // console.log(option);
         document.title = data_site2[2].title;
         description.content = data_site2[2].description;
+        document.querySelector('meta[property="og:title"]').content = data_site2[2].title;
+        document.querySelector('meta[property="og:description"]').content = data_site2[2].description;
         document.getElementById("area-3").click();
         document.querySelector('.section__img-1').classList.remove('visible');
         document.querySelector('.section__img-2').classList.remove('visible');
@@ -634,48 +635,31 @@ var doHistoryLogic = function(page_index, option){
     case "#2":
       document.title = data_site[2].title;
       description.content = data_site[2].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[2].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[2].description;
       // console.log(page_index);
       break;  
     case "#3":
       document.title = data_site[3].title;
       description.content = data_site[3].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[3].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[3].description;
       // console.log(page_index);
       break; 
     case "#4":
       document.title = data_site[4].title;
       description.content = data_site[4].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[4].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[4].description;
       // console.log(page_index);
       break;  
     case "#5":
       document.title = data_site[5].title;
       description.content = data_site[5].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[6].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[6].description;
       // console.log(page_index);
       break; 
-    // case "areas":
-    //   document.title = data_site[1].title;
-    //   description.content = data_site[1].description;
-    //   console.log("1");
-    //   break;
-    // case "process":
-    //   document.title = data_site[2].title;
-    //   description.content = data_site[2].description;
-    //   console.log("2");
-    //   break;  
-    // case "comparing":
-    //   document.title = data_site[3].title;
-    //   description.content = data_site[3].description;
-    //   console.log("3");
-    //   break; 
-    // case "feedback":
-    //   document.title = data_site[4].title;
-    //   description.content = data_site[4].description;
-    //   console.log("4");
-    //   break;  
-    // case "request":
-    //   document.title = data_site[5].title;
-    //   description.content = data_site[5].description;
-    //   console.log("5");
-    //   break; 
   };
 }
 
@@ -694,19 +678,41 @@ var doHistoryLogic = function(page_index, option){
 //  doHistory(loc_id.split("#")[1]);
 //  }
 // });
+var _hashchange_url = function(loc_id, loc_ref, index){
+  if(loc_ref.length > 1){
+    window.history.pushState(loc_id, document.title, loc_ref);
+  }else{
+    if(loc_id == "en"){
+      console.log("en");
+      // doHistory(index, null, "en");
+    }else if(loc_id == "ru"){
+      console.log("ru");
+      // doHistory(index, null, "ru");
+    }else{
+      var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));
+      if(num > 1){
+        var option = index%10;
+        doHistory(1, option);
+      }else{
+        doHistory(index);
+      }
+    }
+  }
+}
 $(document).ready(function(){
   var loc_id = window.location.hash,
       loc_ref = window.location.pathname,
       index = loc_id.split("#")[1];
   // ----------------------------load
   if(loc_id){
-    var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));
-    if(num > 1){
-      var option = index%10;
-      doHistory(1, option);
-    }else{
-      doHistory(index);
-    }
+    // var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));
+    // if(num > 1){
+    //   var option = index%10;
+    //   doHistory(1, option);
+    // }else{
+    //   doHistory(index);
+    // }
+    _hashchange_url(loc_id, loc_ref, index);
   };
   // ----------------------------hashchange
   $(window).bind('hashchange', function() {
@@ -714,17 +720,18 @@ $(document).ready(function(){
         loc_ref = window.location.pathname,
         index = loc_id.split("#")[1];
     if(loc_id){
-      if(loc_ref.length > 1){
-        window.history.pushState(loc_id, document.title, loc_ref);
-      }else{
-        var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));
-        if(num > 1){
-          var option = index%10;
-          doHistory(1, option);
-        }else{
-          doHistory(index);
-        }
-      }
+      _hashchange_url(loc_id, loc_ref, index);
+      // if(loc_ref.length > 1){
+      //   window.history.pushState(loc_id, document.title, loc_ref);
+      // }else{
+      //   var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));
+      //   if(num > 1){
+      //     var option = index%10;
+      //     doHistory(1, option);
+      //   }else{
+      //     doHistory(index);
+      //   }
+      // }
     };
   });
   // ----------------------------radio
