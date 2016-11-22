@@ -177,6 +177,7 @@
       elems.email.classList.add('error');
     }else{
       elems.phone.classList.remove('error');
+      spanPhone.classList.add('hidden');
     }
   };
 
@@ -185,6 +186,7 @@
       elems.phone.classList.add('error');
     }else{
       elems.email.classList.remove('error');
+      spanEmail.classList.add('hidden');
     }
   };
 
@@ -213,11 +215,19 @@
         spanPhone.classList.remove('hidden');
       } else {
         spanPhone.classList.add('hidden');
+        elems.email.classList.remove('error');
+        spanEmail.classList.add('hidden');
       }
     };
 
     elems.phone.onfocus = function () {
       spanPhone.classList.add('hidden');
+      if(!elems.phone.value) {
+        // elems.phone.classList.add('error');
+      }else{
+        elems.email.classList.remove('error');
+        spanEmail.classList.add('hidden');
+      }
     };
 
     elems.email.onchange = function () {
@@ -225,12 +235,19 @@
         spanEmail.classList.remove('hidden');
       } else {
         spanEmail.classList.add('hidden');
+        elems.phone.classList.remove('error');
+        spanPhone.classList.add('hidden');
       }
     };
 
     elems.email.onfocus = function () {
       spanEmail.classList.add('hidden');
-
+      if(!elems.email.value) {
+        // elems.email.classList.add('error');
+      }else{
+        elems.phone.classList.remove('error');
+        spanPhone.classList.add('hidden');
+      }
     };
   },300);
 

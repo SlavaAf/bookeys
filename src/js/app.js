@@ -188,3 +188,12 @@ $(function() {
   });
 })(jQuery);
 // 
+var en = document.getElementById("en"),
+  ru = document.getElementById("ru");
+
+en.onchange = function() {
+  document.location.href = "/en/";
+};
+ru.onchange = function() {
+  document.location.href = "/";
+};

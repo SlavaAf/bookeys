@@ -70,13 +70,13 @@ gulp.task('postcss', function () {
     size,
     responsiveImages,
     clearFix,
-    px2Rem,
+    // px2Rem,
     cssNext,
     cssMqpacker,
     discardComments,
     cssNano
   ];
-  return gulp.src('src/css/style.css')
+  return gulp.src('src/css/*.css')
     .pipe(postcss(processors))
     .pipe(gulp.dest('dist/css/'))
     .pipe(browserSync.stream());

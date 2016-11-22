@@ -569,9 +569,9 @@ var doHistory = function(page_index, option){
   //   }
   // }else{
   if(!option){
-    window.history.pushState("#"+page_index, data_site[page_index].title, "/"+data_site[page_index].url+"/");
+    window.history.pushState("#"+page_index, data_site[page_index].title, "/en/"+data_site[page_index].url+"/");
   }else{
-    window.history.pushState("#"+page_index+String(option), data_site2[option].title, "/"+data_site2[option].url+"/");
+    window.history.pushState("#"+page_index+String(option), data_site2[option].title, "/en/"+data_site2[option].url+"/");
   }
   // };
   // 
