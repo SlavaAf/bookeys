@@ -174,7 +174,9 @@
   elems.email.onblur = function () {
     // elems.email.classList.remove('error');
     if(!elems.email.value) {
-      elems.email.classList.add('error');
+      if(!elems.phone.value) {
+        elems.email.classList.add('error');
+      }
     }else{
       elems.phone.classList.remove('error');
       spanPhone.classList.add('hidden');
@@ -183,7 +185,10 @@
 
   elems.phone.onblur = function () {
     if(!elems.phone.value) {
-      elems.phone.classList.add('error');
+      if(!elems.email.value) {
+        elems.phone.classList.add('error');
+      }
+      // elems.phone.classList.add('error');
     }else{
       elems.email.classList.remove('error');
       spanEmail.classList.add('hidden');
@@ -222,9 +227,7 @@
 
     elems.phone.onfocus = function () {
       spanPhone.classList.add('hidden');
-      if(!elems.phone.value) {
-        // elems.phone.classList.add('error');
-      }else{
+      if(elems.phone.value) {
         elems.email.classList.remove('error');
         spanEmail.classList.add('hidden');
       }
@@ -242,9 +245,7 @@
 
     elems.email.onfocus = function () {
       spanEmail.classList.add('hidden');
-      if(!elems.email.value) {
-        // elems.email.classList.add('error');
-      }else{
+      if(elems.email.value) {
         elems.phone.classList.remove('error');
         spanPhone.classList.add('hidden');
       }
@@ -288,6 +289,7 @@
     formBtn.addEventListener('click', function () {
       success.classList.add('visible');
       layoutLang.classList.add('hidden');
+      onepage.classList.add('hidden');
       disabled_onepage_scroll.classList.add('disabled-onepage-scroll1');
 
         setTimeout(function () {
@@ -331,6 +333,7 @@
           layoutLang.classList.remove('hidden');
           layoutBtn.classList.remove('hidden');
           contacts.classList.remove('hidden');
+          onepage.classList.remove('hidden');
           onepage.classList.remove('onepage-pagination--white');
           layoutLang.classList.remove('layout__lang--white');
         }, 5000);

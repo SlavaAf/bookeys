@@ -554,6 +554,7 @@ function onePageScroll(element, options) {
 // --- URL NEW
 var doHistory = function(page_index, option){
   location.hash = "";
+  event.preventDefault;
   // 
   // doHistoryLogic(page_index);
   // 
@@ -573,19 +574,23 @@ var doHistory = function(page_index, option){
   }else{
     window.history.pushState("#"+page_index+String(option), data_site2[option].title, "/"+data_site2[option].url+"/");
   }
+  console.log(option + " wwww " + page_index);
   // };
   // 
   // console.log(location);
   // console.log(title);
   // console.log(description.content);
   // 
-  doHistoryLogic(page_index, option);
+  // doHistoryLogic_index2(page_index);
+  doHistoryLogic();
+  // doHistoryLogic(page_index, option);
 };
 
 var doHistoryLogic = function(page_index, option){
   switch(window.history.state){
     // case data_site[1].url:
     case "#1":
+      console.log("#1");
       document.title = data_site[1].title;
       description.content = data_site[1].description;
       document.querySelector('meta[property="og:title"]').content = data_site[1].title;
@@ -597,7 +602,7 @@ var doHistoryLogic = function(page_index, option){
       document.querySelector('.section__img-1').classList.add('visible');
       document.querySelector('.section__left').classList.remove('section__left--hover');
     case "#11":
-      // console.log(option);
+      console.log("#11");
       document.title = data_site2[1].title;
       description.content = data_site2[1].description;
       document.querySelector('meta[property="og:title"]').content = data_site2[1].title;
@@ -608,17 +613,18 @@ var doHistoryLogic = function(page_index, option){
       document.querySelector('.section__img-2').classList.add('visible');
       break;
     case "#12":
-        console.log(option);
-        document.title = data_site2[2].title;
-        description.content = data_site2[2].description;
+      console.log("#12");
+      document.title = data_site2[2].title;
+      description.content = data_site2[2].description;
       document.querySelector('meta[property="og:title"]').content = data_site2[2].title;
       document.querySelector('meta[property="og:description"]').content = data_site2[2].description;
-        document.getElementById("area-3").click();
-        document.querySelector('.section__img-1').classList.remove('visible');
-        document.querySelector('.section__img-2').classList.remove('visible');
-        document.querySelector('.section__img-3').classList.add('visible');
-        break;
+      document.getElementById("area-3").click();
+      document.querySelector('.section__img-1').classList.remove('visible');
+      document.querySelector('.section__img-2').classList.remove('visible');
+      document.querySelector('.section__img-3').classList.add('visible');
+      break;
     case "#2":
+      // console.log("#2");
       document.title = data_site[2].title;
       description.content = data_site[2].description;
       document.querySelector('meta[property="og:title"]').content = data_site[2].title;
@@ -655,7 +661,6 @@ var doHistoryLogic_index = function(page_index, option){
       description.content = data_site[1].description;
       document.querySelector('meta[property="og:title"]').content = data_site[1].title;
       document.querySelector('meta[property="og:description"]').content = data_site[1].description;
-
       document.getElementById("area-1").click();
       document.querySelector('.section__img-3').classList.remove('visible');
       document.querySelector('.section__img-2').classList.remove('visible');
@@ -673,39 +678,106 @@ var doHistoryLogic_index = function(page_index, option){
       document.querySelector('.section__img-2').classList.add('visible');
       break;
     case "#12":
-        console.log(option);
-        document.title = data_site2[2].title;
-        description.content = data_site2[2].description;
-        document.querySelector('meta[property="og:title"]').content = data_site2[2].title;
-        document.querySelector('meta[property="og:description"]').content = data_site2[2].description;
-        document.getElementById("area-3").click();
-        document.querySelector('.section__img-1').classList.remove('visible');
-        document.querySelector('.section__img-2').classList.remove('visible');
-        document.querySelector('.section__img-3').classList.add('visible');
-        break;
+      document.title = data_site2[2].title;
+      description.content = data_site2[2].description;
+      document.querySelector('meta[property="og:title"]').content = data_site2[2].title;
+      document.querySelector('meta[property="og:description"]').content = data_site2[2].description;
+      document.getElementById("area-3").click();
+      document.querySelector('.section__img-1').classList.remove('visible');
+      document.querySelector('.section__img-2').classList.remove('visible');
+      document.querySelector('.section__img-3').classList.add('visible');
+      break;
     case "#2":
       document.title = data_site[2].title;
       description.content = data_site[2].description;
       document.querySelector('meta[property="og:title"]').content = data_site[2].title;
       document.querySelector('meta[property="og:description"]').content = data_site[2].description;
+      moveTo('.main', 2);
       break;  
     case "#3":
       document.title = data_site[3].title;
       description.content = data_site[3].description;
       document.querySelector('meta[property="og:title"]').content = data_site[3].title;
       document.querySelector('meta[property="og:description"]').content = data_site[3].description;
+      moveTo('.main', 3);
       break; 
     case "#4":
       document.title = data_site[4].title;
       description.content = data_site[4].description;
       document.querySelector('meta[property="og:title"]').content = data_site[4].title;
       document.querySelector('meta[property="og:description"]').content = data_site[4].description;
+      moveTo('.main', 4);
       break;  
     case "#5":
       document.title = data_site[5].title;
       description.content = data_site[5].description;
       document.querySelector('meta[property="og:title"]').content = data_site[5].title;
       document.querySelector('meta[property="og:description"]').content = data_site[5].description;
+      moveTo('.main', 5);
+      break; 
+  };
+}
+var doHistoryLogic_index2 = function(page_index, option){
+  switch(page_index){
+    case "#1":
+      document.getElementById("area-1").click();
+      document.title = data_site[1].title;
+      description.content = data_site[1].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[1].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[1].description;
+      document.getElementById("area-1").click();
+      document.querySelector('.section__img-3').classList.remove('visible');
+      document.querySelector('.section__img-2').classList.remove('visible');
+      document.querySelector('.section__img-1').classList.add('visible');
+      document.querySelector('.section__left').classList.remove('section__left--hover');
+      break;
+    case "#11":
+      document.title = data_site2[1].title;
+      description.content = data_site2[1].description;
+      document.querySelector('meta[property="og:title"]').content = data_site2[1].title;
+      document.querySelector('meta[property="og:description"]').content = data_site2[1].description;
+      document.getElementById("area-2").click();
+      document.querySelector('.section__img-3').classList.remove('visible');
+      document.querySelector('.section__img-1').classList.remove('visible');
+      document.querySelector('.section__img-2').classList.add('visible');
+      break;
+    case "#12":
+      document.title = data_site2[2].title;
+      description.content = data_site2[2].description;
+      document.querySelector('meta[property="og:title"]').content = data_site2[2].title;
+      document.querySelector('meta[property="og:description"]').content = data_site2[2].description;
+      document.getElementById("area-3").click();
+      document.querySelector('.section__img-1').classList.remove('visible');
+      document.querySelector('.section__img-2').classList.remove('visible');
+      document.querySelector('.section__img-3').classList.add('visible');
+      break;
+    case "#2":
+      document.title = data_site[2].title;
+      description.content = data_site[2].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[2].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[2].description;
+      // moveTo('.main', 2);
+      break;  
+    case "#3":
+      document.title = data_site[3].title;
+      description.content = data_site[3].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[3].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[3].description;
+      // moveTo('.main', 3);
+      break; 
+    case "#4":
+      document.title = data_site[4].title;
+      description.content = data_site[4].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[4].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[4].description;
+      // moveTo('.main', 4);
+      break;  
+    case "#5":
+      document.title = data_site[5].title;
+      description.content = data_site[5].description;
+      document.querySelector('meta[property="og:title"]').content = data_site[5].title;
+      document.querySelector('meta[property="og:description"]').content = data_site[5].description;
+      // moveTo('.main', 5);
       break; 
   };
 }
@@ -731,6 +803,7 @@ $(document).ready(function(){
       index = loc_id.split("#")[1];
   // ----------------------------load
   if(loc_id){
+    console.log(loc_id + " ready")
     var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));
     if(num > 1){
       var option = index%10;
@@ -740,6 +813,7 @@ $(document).ready(function(){
     }
   };
   if(loc_ref){
+    console.log(loc_ref);
     var url_p = loc_ref.split("/")[1];
     switch(url_p){
       case "heat_generation":
@@ -765,13 +839,44 @@ $(document).ready(function(){
         break;
     }
   }; 
+  if(sessionStorage["version"]){
+    console.log(sessionStorage.version);
+    // var url_p = loc_ref.split("/")[4];
+    var url_p = sessionStorage.version.split("/")[4];
+    switch(url_p){
+      case "heat_generation":
+        doHistoryLogic_index("#1");
+        break;
+      case "heat_consuming":
+        doHistoryLogic_index("#11");
+        break;
+      case "industry":
+        doHistoryLogic_index("#12");
+        break;
+      case "process":
+        doHistoryLogic_index("#2");
+        break;
+      case "comparing":
+        doHistoryLogic_index("#3");
+        break;
+      case "feedback":
+        doHistoryLogic_index("#4");
+        break;
+      case "request":
+        doHistoryLogic_index("#5");
+        break;
+      default:
+        doHistoryLogic_index("#1");
+        break;
+    }
+  }; 
   // ----------------------------hashchange
   $(window).bind('hashchange', function() {
     var loc_id = window.location.hash,
         loc_ref = window.location.pathname,
         index = loc_id.split("#")[1];
     if(loc_id){
-      if(loc_ref.length > 1){
+      if((loc_ref.length > 1)&&(loc_ref.length < 4)){
         window.history.pushState(loc_id, document.title, loc_ref);
       }else{
         var num = Math.ceil(Math.log10(Math.abs(index) + 0.5));

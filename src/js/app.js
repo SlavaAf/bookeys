@@ -57,6 +57,7 @@ onePageScroll(".main", {
    if(section5.classList.contains('active')) {
      layoutBtn.classList.add('hidden');
      contacts.classList.add('hidden');
+     layoutAbout.classList.add('hidden');
      onepage.classList.add('onepage-pagination--white');
      layoutLang.classList.add('layout__lang--white');
      langLink.classList.add('hidden');
@@ -192,8 +193,14 @@ var en = document.getElementById("en"),
   ru = document.getElementById("ru");
 
 en.onchange = function() {
+  sessionStorage["version"] = window.location;
   document.location.href = "/en/";
 };
 ru.onchange = function() {
+  sessionStorage["version"] = window.location;
   document.location.href = "/";
 };
+
+if(sessionStorage.version){
+  // console.log(sessionStorage.version);
+}

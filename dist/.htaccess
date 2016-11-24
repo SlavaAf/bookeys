@@ -1,0 +1,23 @@
+Options -Indexes 
+RewriteEngine On
+
+Redirect 301 /en/heat_generation/ /en
+Redirect 301 /en/heat_generation /en
+
+Redirect 301 /en/heat_consuming/ /en
+Redirect 301 /en/heat_consuming /en
+
+Redirect 301 /en/industry/ /en
+Redirect 301 /en/industry /en
+
+Redirect 301 /en/process/ /en
+Redirect 301 /en/process /en
+
+Redirect 301 /en/comparing/ /en
+Redirect 301 /en/comparing /en
+
+Redirect 301 /en/feedback/ /en
+Redirect 301 /en/feedback /en
+
+Redirect 301 /en/request/ /en
+Redirect 301 /en/request /en

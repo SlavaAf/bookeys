@@ -11,7 +11,7 @@
 	    margin: 80px 42px 20px 35px;
 	    // font-size: 26px;
 	    // font-size: 48px;
-	    line-height: 1.4;
+	    line-height: 1.2;
 	    letter-spacing: .4px; 
 	    margin-bottom: 0;
 	    font-size: 48px;
@@ -32,6 +32,7 @@
 .section__title{
 	color: #333;
 	left: 30%;
+	letter-spacing: 4px;
 }
 i{
 	&.rouble{
@@ -81,12 +82,22 @@ i{
 .imageReveal-drag{
 	&:hover{
 		&::after{
-			background-image: url(../img/i-toggle-image_x.svg)
+			background-image: url(../img/i-toggle-image_x.svg);
+			background-color: #21ed9f;
+		}
+	}
+	&.dragging{
+		&::after{
+			background-image: url(../img/i-toggle-image_x.svg);
+			background-color: #00dc89;
 		}
 	}
 }
-.scheme__toggle-text-wrap{
+.scheme__toggle-wrap{
 	&:hover{
+		.scheme__toggle-open{
+			background-image: url(../img/i-open-scheme_x.svg);
+		}
 		.scheme__toggle-text{
 			color: rgba(255, 255, 255, 0.8);
 		}
@@ -96,4 +107,14 @@ i{
 	&:hover{
 		opacity: 0.8;
 	}
+}
+#select{
+	height: 1px!important;
+	left: 11px!important;
+}
+.hidden{
+	max-height: 1px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
 }
